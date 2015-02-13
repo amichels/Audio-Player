@@ -1,3 +1,16 @@
+/* Animation */
+
+@-webkit-keyframes play-record{
+  0% { 
+    -webkit-transform: rotate(0deg);
+  }
+  100% { 
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+/* General */
+
 body{
   margin:0;
   background:#272822;
@@ -52,8 +65,6 @@ body{
 .album-face{
   z-index: 3;
 }
-
-
 .album-back {
   display: block;
   -webkit-transform: rotateY(180deg);
@@ -88,16 +99,33 @@ body{
 
 /* Record */
 
+.player{
+  opacity:0;
+  position:fixed;
+  z-index:-1;
+  transition:all 1s ease-in;
+  background-color:rgba(0,0,0,.7);
+}
+.player.active{
+  opacity:1;
+  z-index:300;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+}
+
 .vinyl {
-    position:absolute;
-    top:7px;
     display:block;
-    width:284px;
-    height:284px;
+    width:500px;
+    height:500px;
     border-radius:50%;
     background: #2f2f2e;
     border:1px solid #595959;
+    position:relative;
+    top:5em;
     z-index:1;
+    margin:0 auto;
 }
 .vinyl:before {
     position:absolute;
@@ -116,22 +144,24 @@ body{
     border:10px solid #2f2f2e;
     content:"\2022";
     color:#fff;
-    width:110px;
+    width:200px;
     display:block;
-    height:110px;
+    height:200px;
     border-radius:50%;
     text-align:center;
-    line-height:110px;
+    line-height:188px;
     position:absolute;
     top:50%;
     left:50%;
-    margin:-65px 0 0 -65px;
+    margin:-109px 0 0 -109px;
     font-size:42px;
-    background-color: rgb(191, 69, 58);
+    background: url(../images/teen-dream.jpg) no-repeat center;
+    background-size:cover;
     text-shadow: rgb(176, 63, 53) 1px 1px, rgb(176, 63, 53) 2px 2px, rgb(176, 63, 53) 3px 3px, rgb(176, 63, 53) 4px 4px, rgb(177, 63, 53) 5px 5px, rgb(179, 64, 54) 6px 6px, rgb(180, 64, 54) 7px 7px, rgb(182, 65, 55) 8px 8px, rgb(183, 66, 55) 9px 9px, rgb(185, 66, 56) 10px 10px, rgb(186, 67, 56) 11px 11px, rgb(188, 67, 57) 12px 12px, rgb(189, 68, 57) 13px 13px, rgb(191, 69, 58) 14px 14px;
 }
-
-/* Play Button */
+.active .vinyl {
+  -webkit-animation: play-record 3s infinite linear;
+}
 
 .play-bt {
     height: 50px;
@@ -141,7 +171,7 @@ body{
     position: relative;
     margin:0 auto;
     display:block;
-    margin-top:2.8em;
+    margin-top:2.9em;
 }
 
 .play-bt:hover {
