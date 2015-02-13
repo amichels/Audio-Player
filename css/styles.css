@@ -140,16 +140,13 @@ body{
     top:0;
     left:0;
 }
-.vinyl::after {
+.vinyl .label{
     border:10px solid #2f2f2e;
-    content:"\2022";
-    color:#fff;
+    
     width:200px;
     display:block;
     height:200px;
     border-radius:50%;
-    text-align:center;
-    line-height:188px;
     position:absolute;
     top:50%;
     left:50%;
@@ -157,10 +154,15 @@ body{
     font-size:42px;
     background: url(../images/teen-dream.jpg) no-repeat center;
     background-size:cover;
-    text-shadow: rgb(176, 63, 53) 1px 1px, rgb(176, 63, 53) 2px 2px, rgb(176, 63, 53) 3px 3px, rgb(176, 63, 53) 4px 4px, rgb(177, 63, 53) 5px 5px, rgb(179, 64, 54) 6px 6px, rgb(180, 64, 54) 7px 7px, rgb(182, 65, 55) 8px 8px, rgb(183, 66, 55) 9px 9px, rgb(185, 66, 56) 10px 10px, rgb(186, 67, 56) 11px 11px, rgb(188, 67, 57) 12px 12px, rgb(189, 68, 57) 13px 13px, rgb(191, 69, 58) 14px 14px;
+    /*text-shadow: rgb(186, 186, 186) 1px 1px, rgb(186, 186, 186) 2px 2px, rgb(186, 186, 186) 3px 3px, rgb(186, 186, 186) 4px 4px, rgb(186, 186, 186) 5px 5px, rgb(186, 186, 186) 6px 6px, rgb(186, 186, 186) 7px 7px, rgb(186, 186, 186) 8px 8px, rgb(186, 186, 186) 9px 9px, rgb(186, 186, 186) 10px 10px, rgb(186, 186, 186) 11px 11px, rgb(186, 186, 186) 12px 12px, rgb(186, 186, 186) 13px 13px, rgb(186, 186, 186) 14px 14px;*/
 }
-.active .vinyl {
+/*.vinyl .pin{
+  content:"\2022";
+  color:#fff;
+}*/
+.play .vinyl {
   -webkit-animation: play-record 3s infinite linear;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .play-bt {
@@ -188,4 +190,9 @@ body{
     border-style: solid;
     border-width: 9.5px 0 9.5px 17px;
     border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+}
+.player-controls{
+  width:100%;
+  position:absolute;
+  top:0;
 }

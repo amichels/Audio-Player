@@ -17,8 +17,13 @@
 </head>
 
 <body>
-  <div class="player">
-    <div class="vinyl"></div>
+  <div id="js-player" class="player">
+    <div class="vinyl">
+      <span class="label">
+        <!-- <span class="pin"></span> -->
+      </span>
+    </div>
+    <audio id="js-controls" class="player-controls" controls></audio>
   </div>
   <div class="wrapper">
     <div class="album-con">
@@ -30,7 +35,7 @@
           <img class="album-img" src="images/teen-dream.jpg" alt=""/>
           <h2 class="album-song">Take Care</h2>
           <h3 class="album-band">Beach House</h3>
-          <a class="play-bt js-play-bt" data-album="take-care" href="#" title="Play"></a>
+          <a class="play-bt js-play-bt" data-album="teen-dream" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -43,7 +48,7 @@
           <img class="album-img" src="images/antics.jpg" alt=""/>
           <h2 class="album-song">Slow Hands</h2>
           <h3 class="album-band">Interpol</h3>
-          <a class="play-bt js-play-bt" data-album="take-care" href="#" title="Play"></a>
+          <a class="play-bt js-play-bt" data-album="antics" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -56,6 +61,7 @@
           <img class="album-img" src="images/clap-your-hands-say-yeah.jpg" alt=""/>
           <h2 class="album-song">Is This Love?</h2>
           <h3 class="album-band">Clap Your Hands Say Yeah</h3>
+          <a class="play-bt js-play-bt" data-album="clap-your-hands-say-yeah" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -68,6 +74,7 @@
           <img class="album-img" src="images/crazy-for-you.jpg" alt=""/>
           <h2 class="album-song">When I'm With You</h2>
           <h3 class="album-band">Best Coast</h3>
+          <a class="play-bt js-play-bt" data-album="crazy-for-you" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -80,6 +87,7 @@
           <img class="album-img" src="images/discovery.jpg" alt=""/>
           <h2 class="album-song">Digital Love</h2>
           <h3 class="album-band">Daft Punk</h3>
+          <a class="play-bt js-play-bt" data-album="discovery" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -92,6 +100,7 @@
           <img class="album-img" src="images/eyes-open.jpg" alt=""/>
           <h2 class="album-song">Chasing Cars</h2>
           <h3 class="album-band">Snow Patrol</h3>
+          <a class="play-bt js-play-bt" data-album="eyes-open" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -104,6 +113,7 @@
           <img class="album-img" src="images/fever-to-tell.jpg" alt=""/>
           <h2 class="album-song">Maps</h2>
           <h3 class="album-band">Yeah Yeah Yeahs</h3>
+          <a class="play-bt js-play-bt" data-album="fever-to-tell" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -116,6 +126,7 @@
           <img class="album-img" src="images/give-up.jpg" alt=""/>
           <h2 class="album-song">Such Great Heights</h2>
           <h3 class="album-band">The Postal Service</h3>
+          <a class="play-bt js-play-bt" data-album="give-up" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -128,6 +139,7 @@
           <img class="album-img" src="images/motorcade-of-generosity.jpg" alt=""/>
           <h2 class="album-song">Jolene</h2>
           <h3 class="album-band">Cake</h3>
+          <a class="play-bt js-play-bt" data-album="motorcade-of-generosity" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -140,6 +152,7 @@
           <img class="album-img" src="images/oh-inverted-world.jpg" alt=""/>
           <h2 class="album-song">New Slang</h2>
           <h3 class="album-band">The Shins</h3>
+          <a class="play-bt js-play-bt" data-album="oh-inverted-world" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -152,6 +165,7 @@
           <img class="album-img" src="images/red-yellow-blue.jpg" alt=""/>
           <h2 class="album-song">Litle Garcon</h2>
           <h3 class="album-band">Born Ruffians</h3>
+          <a class="play-bt js-play-bt" data-album="red-yellow-blue" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -164,6 +178,7 @@
           <img class="album-img" src="images/starfucker.jpg" alt=""/>
           <h2 class="album-song">Rawnald Gergory Erickson the Second</h2>
           <h3 class="album-band">STRFKR</h3>
+          <a class="play-bt js-play-bt" data-album="starfucker" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -176,6 +191,7 @@
           <img class="album-img" src="images/the-big-come-up.jpg" alt=""/>
           <h2 class="album-song">I'll Be Your Man</h2>
           <h3 class="album-band">The Black Keys</h3>
+          <a class="play-bt js-play-bt" data-album="the-big-come-up" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -188,6 +204,7 @@
           <img class="album-img" src="images/white-blood-cells.jpg" alt=""/>
           <h2 class="album-song">Fell In Love With A Girl</h2>
           <h3 class="album-band">The White Stripes</h3>
+          <a class="play-bt js-play-bt" data-album="white-blood-cells" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -200,6 +217,7 @@
           <img class="album-img" src="images/yoshimi.jpg" alt=""/>
           <h2 class="album-song">Do You Realize??</h2>
           <h3 class="album-band">The Flaming Lips</h3>
+          <a class="play-bt js-play-bt" data-album="yoshimi" href="#" title="Play"></a>
         </div>
       </div>
     </div>
@@ -212,6 +230,7 @@
           <img class="album-img" src="images/yuck.jpg" alt=""/>
           <h2 class="album-song">Suck</h2>
           <h3 class="album-band">Yuck</h3>
+          <a class="play-bt js-play-bt" data-album="yuck" href="#" title="Play"></a>
         </div>
       </div>
     </div>
