@@ -1,6 +1,8 @@
 $(document).ready(function(){
 	var audio = document.getElementById('js-controls');
-	$(".js-play-bt").click(function(){
+	$(".js-play-bt").click(function(e){
+
+		e.preventDefault();
 		var album = $(this).attr("data-album");
 		$(".player").addClass("active");
 		$(".label").css("background-image","url(images/"+album+".jpg)");

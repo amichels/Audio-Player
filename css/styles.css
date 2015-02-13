@@ -11,15 +11,32 @@
 
 /* General */
 
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
 body{
   margin:0;
   background:#272822;
-  padding:1em .5em;
+  padding:1em .5em 5em;
   font-family: 'Lato', sans-serif;
 }
 .wrapper{
   margin:0 auto;
   width:1200px;
+}
+.main-header{
+  color:#D10000;
+  font-weight:100;
+  font-size:4.5em;
+  text-align:center;
+  margin:1em 0;
 }
 
 /* Album */
@@ -100,14 +117,14 @@ body{
 /* Record */
 
 .player{
-  opacity:0;
+  display:none;
   position:fixed;
   z-index:-1;
   transition:all 1s ease-in;
   background-color:rgba(0,0,0,.7);
 }
 .player.active{
-  opacity:1;
+  display:block;
   z-index:300;
   top:0;
   right:0;
@@ -177,7 +194,7 @@ body{
 }
 
 .play-bt:hover {
-    background-color: rgba(0, 173, 239, 0.9);
+    background-color: #D10000;
 }
 
 .play-bt:after {
